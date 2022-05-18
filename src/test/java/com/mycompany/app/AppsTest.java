@@ -34,7 +34,7 @@ public class AppsTest
     {
         App.mainfunc(null);
         try {
-            assertEquals("test" + System.getProperty("line.separator"), outContent.toString());
+            assertEquals("test junit" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
             fail("\"message\" is not \"test junit!\"");
         }
