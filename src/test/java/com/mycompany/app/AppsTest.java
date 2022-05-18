@@ -32,11 +32,11 @@ public class AppsTest
     @Test
     public void testAppMain()
     {
-        App.main(null);
+        App.mainfunc(null);
         try {
-            assertEquals("Hello" + System.getProperty("line.separator"), outContent.toString());
+            assertEquals("test junit" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
-            fail("\"message\" is not \"Hello World!\"");
+            fail("\"message\" is not \"test junit!\"");
         }
     }
 
