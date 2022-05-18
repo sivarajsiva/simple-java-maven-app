@@ -14,6 +14,9 @@ public class App
         System.out.println(new App().getMessage());
     }
 
+    public static void mainfunc(String[] args) {
+        System.out.println("test junit");
+    }
     private final String getMessage() {
         return message;
     }
