@@ -33,7 +33,8 @@ pipeline {
                             "job": "leader"
                     },
                     }''',
-                    url: 'https://reqres.in/api/users'
+                    url: 'https://reqres.in/api/users',
+                    validResponseCodes: '200:404'
                     
                     println("Status: "+response.status)
                     println("Content: "+response.content)
