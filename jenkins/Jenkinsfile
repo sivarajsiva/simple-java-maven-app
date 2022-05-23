@@ -26,8 +26,15 @@ pipeline {
                 steps{
                   script{
                     response = httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON',
-                    httpMode: 'GET', quiet: true,
-                    url: 'https://reqres.in/api/users?page=2'
+                    httpMode: 'POST', quiet: true,
+                    requestBody: '''{
+             
+                           "email" : "eve.holt@reqres.in",
+                            "password" : {
+                                "value" : "cityslicka"
+                    },
+                    }''',
+                    url: 'https://reqres.in/api/login'
                     
                     println("Status: "+response.status)
                     println("Content: "+response.content)
