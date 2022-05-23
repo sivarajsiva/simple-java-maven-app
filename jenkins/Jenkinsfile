@@ -24,7 +24,7 @@ pipeline {
         }
             stage('url-check'){
                 steps{
-                    httpRequest "https://dummy.restapiexample.com/api/v1/employees"
+                    httpRequest "https://dummy.restapiexample.com/api/v1/employee/1"
                 }
       }
     }
