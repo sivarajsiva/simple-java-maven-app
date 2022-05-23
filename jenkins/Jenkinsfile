@@ -28,10 +28,10 @@ pipeline {
                     httpMode: 'POST', quiet: true,
                     requestBody: '''{
                         "email": "eve.holt@reqres.in",
-                        "password": "cityslicka"
+                        "password": "pistol"
             },
             }''',
-            url: 'https://reqres.in/api/login'
+            url: 'https://reqres.in/api/register'
 
                 }
       }
