@@ -15,18 +15,17 @@ pipeline {
         stage('Test') {
             steps {
                 sh "mvn test -Dtest='AppsTest'"
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/TEST-com.mycompany.app.AppTest.xml'
-                }
-            }
+            }   
+        }
             stage('url-check'){
                 steps{
                     httpRequest "https:google.com"
                 }
             }
-        }
-        
+        post {
+                always {
+                    junit 'target/surefire-reports/TEST-com.mycompany.app.AppTest.xml'
+                }
+        }   
     }
 }
