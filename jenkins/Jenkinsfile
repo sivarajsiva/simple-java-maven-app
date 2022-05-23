@@ -27,13 +27,11 @@ pipeline {
                     httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON',
                     httpMode: 'POST', quiet: true,
                     requestBody: '''{
-                    "display-name" : "my_Username",
-                    "email" : user@example.test,
-                    "password" : {
-                  "value" : "my_password"
-               },
+                        "email": "eve.holt@reqres.in",
+                        "password": "cityslicka"
+            },
             }''',
-            url: 'https://api.github.com/orgs/${orgName}'
+            url: 'https://reqres.in/api/login'
 
                 }
       }
