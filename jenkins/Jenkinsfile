@@ -24,7 +24,7 @@ pipeline {
         }
             stage('url-check'){
                 steps{
-                    httpRequest "https:google.com"
+                    httpRequest "https://www.appsloveworld.com/free-online-sample-rest-api-url-for-testing/"
                 }
       }
     }
