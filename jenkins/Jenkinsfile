@@ -29,11 +29,11 @@ pipeline {
                     httpMode: 'POST', quiet: true,
                     requestBody: '''{
              
-                           "name": "morpheus",
-                            "job": "leader"
+                           "key": "value",
+                           
                     },
                     }''',
-                    url: 'https://reqres.in/api/users',
+                    url: 'https://reqbin.com/sample/post/json',
                     validResponseCodes: '200:404'
                     
                     println("Status: "+response.status)
