@@ -24,7 +24,17 @@ pipeline {
         }
             stage('url-check'){
                 steps{
-                    httpRequest "https://dummy.restapiexample.com/api/v1/employee/1"
+                    httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON',
+                    httpMode: 'POST', quiet: true,
+                    requestBody: '''{
+                    "display-name" : "my_Username",
+                    "email" : user@example.test,
+                    "password" : {
+                  "value" : "my_password"
+               },
+            }''',
+            url: 'https://api.github.com/orgs/${orgName}'
+
                 }
       }
     }
