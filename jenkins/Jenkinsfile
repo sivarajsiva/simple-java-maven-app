@@ -25,13 +25,8 @@ pipeline {
             stage('url-check'){
                 steps{
                     httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON',
-                    httpMode: 'POST', quiet: true,
-                    requestBody: '''{
-                        "email": "eve.holt@reqres.in",
-                        "password": "pistol"
-            },
-            }''',
-            url: 'https://reqres.in/api/register'
+                    httpMode: 'GET', quiet: true,
+            url: 'https://reqres.in/api/users?page=2'
 
                 }
       }
