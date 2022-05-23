@@ -29,12 +29,11 @@ pipeline {
                     httpMode: 'POST', quiet: true,
                     requestBody: '''{
              
-                           "email" : "eve.holt@reqres.in",
-                            "password" : {
-                                "value" : "cityslicka"
+                           "name": "morpheus",
+                            "job": "leader"
                     },
                     }''',
-                    url: 'https://reqres.in/api/login'
+                    url: 'https://reqres.in/api/users'
                     
                     println("Status: "+response.status)
                     println("Content: "+response.content)
