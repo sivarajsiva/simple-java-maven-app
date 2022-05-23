@@ -21,11 +21,11 @@ pipeline {
                 steps{
                     httpRequest "https:google.com"
                 }
-            }
         post {
                 always {
                     junit 'target/surefire-reports/TEST-com.mycompany.app.AppTest.xml'
                 }
-        }   
+        }  
+      }
     }
 }
